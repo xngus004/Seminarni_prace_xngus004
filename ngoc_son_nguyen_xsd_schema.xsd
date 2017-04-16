@@ -1,0 +1,54 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="aplikace">
+<xs:complexType>
+	<xs:sequence>
+		<xs:element name="user"/>
+	</xs:sequence>
+</xs:complexType>
+<xs:element>
+
+<xs:element name="club_music">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="zanr" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="zanr_desc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"/>
+        <xs:element name="nazev_z" type="xs:string"/>
+        <xs:element name="sub_zanr" type="xs:string"/>
+        <xs:element name="desc" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="pisnicky">
+    <xs:complexType>
+      <xs:sequence>
+       <xs:element name="pisen" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="pohlavi" type="xs:string"/>
+    </xs:complexType> 
+</xs:element>
+
+<xs:element name="pisen">
+  <xs:complexType>
+    <xs:sequence>
+        <xs:element type="xs:string" name="nazev" />
+        <xs:element type="xs:string" name="autor"/>
+        <xs:element type="xs:string" name="album"/>
+        <xs:element type="xs:short" name="bpm"/>
+        <xs:element type="xs:string" name="tonina"/>
+        <xs:element type="xs:short" name="rok_vydani"/>
+        <xs:element type="xs:string" name="label"/> 
+    </xs:sequence>
+    <xs:attribute name="PG12" type="xs:string"/> 
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

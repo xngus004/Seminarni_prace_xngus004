@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href="Ngoc_Son_Nguyen\ngoc_son_nguyen_xsl.xsl"?> 
+<club_music xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ngoc_son_nguyen_xsd_schema.xsd">
+<!-- Aplikace -->
+<aplikace>
+  <!-- Vlastnosti uživatele -->
+		<user>
+			<id>1</id>
+      <uziv_jm></uziv_jm>
+			<jmeno></jmeno>
+      <prijmeni></prijmeni>
+      <dat_nar></dat_nar>
+			<heslo></heslo>
+			<preference></preference>
+      <like></like>
+			<membership>
+				<free></free>
+				<vip></vip>
+			</membership>
+			<email></email>
+		</user>
+
+<!-- Nastavení aplikace -->
+		<nastaveni>
+      <jazyk>CZ</jazyk>
+			<jas>70%</jas>	
+			<volume>53%</volume>
+			<nahodne_prehr>1</nahodne_prehr>
+			<night_mode>0</night_mode>
+		</nastaveni>
+
+<!-- Vyhledávací pole -->
+		<search>
+			<text></text>
+			<h_zanr></h_zanr>
+			<bpm></bpm>
+			<pohlavi_aut></pohlavi_aut>
+			<rok_vyd></rok_vyd>
+		</search>
+</aplikace>
+
+<!-- Databáze s hudbou -->
+<!-- Drum and bass -->
+  <zanr>
+    <zanr_desc>
+      <id>1</id> 
+      <nazev_z>Drum and bass</nazev_z>
+      <sub_zanr>Deep</sub_zanr> 
+      <desc>Svižný styl hudby se zaměřením na tóny v nízkých frekvencích</desc> 
+    </zanr_desc>
+    <pisnicky> 
+      <pisen pohlavi= "M">
+        <nazev>Elephant dreams</nazev>
+        <autor>Alix Perez</autor>
+        <album>Stone Wall EP</album>
+        <bpm>87</bpm>
+        <tonina>C-minor</tonina> 
+        <rok_vydani>2017</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>1991</label>
+      </pisen>
+      <pisen pohlavi= 'M'>
+        <nazev>20 questions</nazev>
+        <autor>Ivy Lab</autor>
+        <album>Beach and Sandcastles</album>
+        <bpm>88</bpm>
+        <tonina>A-major</tonina> 
+        <rok_vydani>2016</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Critical Records</label>
+      </pisen>
+      <pisen pohlavi= 'M'>
+        <nazev>Bricks don't roll</nazev>
+        <autor>DJ Hazard</autor>
+        <album>Bricks don't roll EP</album>
+        <bpm>87</bpm>
+        <tonina>D-minor</tonina> 
+        <rok_vydani>2013</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Playaz</label>
+      </pisen>
+    </pisnicky> 
+  </zanr>
+<!-- House -->
+   <zanr>
+    <zanr_desc>
+      <id>2</id> 
+      <nazev_z>House</nazev_z>
+      <sub_zanr>Deep</sub_zanr> 
+      <desc>Taneční hudba pro nenáročný poslech, spojuje nejen prvky jazzu a soulu</desc> 
+    </zanr_desc>
+    <pisnicky> 
+      <pisen pohlavi= 'M'> 
+        <nazev>See you on monday</nazev>
+        <autor>Herbert</autor>
+        <album>London town</album>
+        <bpm>123</bpm>
+        <tonina>G-major</tonina> 
+        <rok_vydani>1995</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Phono</label>
+      </pisen>
+      <pisen pohlavi= 'M'>
+        <nazev>Ysl</nazev>
+        <autor>Andy Kowles</autor>
+        <album>French me</album>
+        <bpm>125</bpm>
+        <tonina>B-minor</tonina> 
+        <rok_vydani>1993</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>You can</label>
+      </pisen>
+      <pisen pohlavi= 'Z'>
+        <nazev>Hohai beats</nazev>
+        <autor>Nina Kraviz</autor>
+        <album>Tokyo series</album>
+        <bpm>125</bpm>
+        <tonina>A-major</tonina> 
+        <rok_vydani>1998</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Sakura</label>
+      </pisen>
+    </pisnicky> 
+  </zanr>
+<!-- Techno -->
+  <zanr>
+    <zanr_desc>
+      <id>3</id> 
+      <nazev_z>Techno</nazev_z>
+      <sub_zanr>Minimal</sub_zanr> 
+      <desc>Taneční elektronická hudba s minimalistickými prvky</desc> 
+    </zanr_desc>
+    <pisnicky> 
+      <pisen pohlavi= 'M'> 
+        <nazev>Last Call</nazev>
+        <autor>Alex Kennon</autor>
+        <album>Last Call single</album>
+        <bpm>128</bpm>
+        <tonina>B-minor</tonina> 
+        <rok_vydani>2016</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Dyinamic</label>
+      </pisen>
+      <pisen pohlavi= 'M'>
+        <nazev>Martinitoren</nazev>
+        <autor>Lemmon</autor>
+        <album>Mason</album>
+        <bpm>121</bpm>
+        <tonina>F-minor</tonina> 
+        <rok_vydani>2013</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Of unsound mind</label>
+      </pisen>
+      <pisen pohlavi= 'Z'>
+        <nazev>Stay</nazev>
+        <autor>Tiger Head</autor>
+        <album>Calm</album>
+        <bpm>123</bpm>
+        <tonina>A-major</tonina> 
+        <rok_vydani>2008</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Dirt crew</label>
+      </pisen>
+    </pisnicky> 
+  </zanr>
+  <!-- Trap -->
+  <zanr>
+    <zanr_desc>
+      <id>4</id> 
+      <nazev_z>Trap</nazev_z>
+      <sub_zanr>Instrumental</sub_zanr> 
+      <desc>Styl který se podobá hip hopu, jde o beaty s hlavním zaměřením na nízké frekvence a kompozici činelů</desc> 
+    </zanr_desc>
+    <pisnicky> 
+      <pisen pohlavi= 'M'> 
+        <nazev>TRAP SHIT V6</nazev>
+        <autor>UZ</autor>
+        <album>Trap shit series</album>
+        <bpm>130</bpm>
+        <tonina>B-minor</tonina> 
+        <rok_vydani>2014</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Owsla</label>
+      </pisen>
+      <pisen pohlavi= 'M'>
+        <nazev>Core</nazev>
+        <autor>RL Grime</autor>
+        <album>Core single</album>
+        <bpm>150</bpm>
+        <tonina>D-minor</tonina> 
+        <rok_vydani>2015</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Critical Records</label>
+      </pisen>
+      <pisen pohlavi= 'M'>
+        <nazev>Clang</nazev>
+        <autor>Baauer</autor>
+        <album>Discover</album>
+        <bpm>140</bpm>
+        <tonina>A-minor</tonina> 
+        <rok_vydani>2013</rok_vydani>
+        <pristupne PG12= 'Ano'/>
+        <label>Sony</label>
+      </pisen>
+    </pisnicky> 
+  </zanr>
+</club_music>
