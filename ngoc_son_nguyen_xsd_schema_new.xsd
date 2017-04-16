@@ -1,0 +1,228 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="club_music">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="aplikace">
+          <xs:annotation>
+            <xs:documentation>Aplikace</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user">
+                <xs:annotation>
+                  <xs:documentation>Vlastnosti uživatele</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="id"/>
+                    <xs:element type="xs:string" name="uziv_jm"/>
+                    <xs:element type="xs:string" name="jmeno"/>
+                    <xs:element type="xs:string" name="prijmeni"/>
+                    <xs:element type="xs:date" name="dat_nar"/>
+                    <xs:element type="xs:string" name="heslo"/>
+                    <xs:element type="xs:string" name="email"/>
+                    <xs:element name="interface">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="img" name="avatar"/>
+                          <xs:element type="xs:string" name="preference"/>
+                          <xs:element type="xs:integer" name="like"/>
+                          <xs:element name="membership">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="nula_jedna" name="free"/>
+                                <xs:element type="nula_jedna" name="vip"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="user_f">
+                <xs:annotation>
+                  <xs:documentation>Vlastnosti free uživatele</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="nula_jedna" name="reklamy"/>
+                    <xs:element type="nula_jedna" name="download"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="user_v">
+                <xs:annotation>
+                  <xs:documentation>Vlastnosti vip uživatele</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="nula_jedna" name="reklamy"/>
+                    <xs:element type="nula_jedna" name="download"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="nastaveni">
+                <xs:annotation>
+                  <xs:documentation>Nastavení aplikace</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="lang" name="jazyk"/>
+                    <xs:element type="slider" name="jas"/>
+                    <xs:element type="nula_jedna" name="notifikace"/>
+                    <xs:element type="nula_jedna" name="nahodne_prehr"/>
+                    <xs:element type="nula_jedna" name="prehravani_pref"/>
+                    <xs:element type="nula_jedna" name="night_mode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="prehravac">
+                <xs:annotation>
+                  <xs:documentation>Komponenty přehrávače</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="img" name="stopa"/>
+                    <xs:element type="slider" name="volume"/>
+                    <xs:element name="tlacitka">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="nula_jedna" name="play"/>
+                          <xs:element type="nula_jedna" name="pause"/>
+                          <xs:element type="nula_jedna" name="stop"/>
+                          <xs:element type="xs:string" name="share"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="z_hudba">
+                <xs:annotation>
+                  <xs:documentation>Vlastnosti domovské stránky</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="nula_jedna" name="by_pref"/>
+                    <xs:element type="nula_jedna" name="by_like"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="search">
+                <xs:annotation>
+                  <xs:documentation>Vyhledávací pole</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="text"/>
+                    <xs:element name="filtr">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="h_zanr"/>
+                          <xs:element type="xs:integer" name="f_bpm"/>
+                          <xs:element type="gender" name="pohlavi_aut"/>
+                          <xs:element type="xs:integer" name="rok_vyd"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="zanr" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Databáze s hudbou  Drum and bass, House, Techno, Trap</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="zanr_desc">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="id"/>
+                    <xs:element type="xs:string" name="nazev_z"/>
+                    <xs:element type="xs:string" name="sub_zanr"/>
+                    <xs:element type="xs:string" name="desc"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="pisnicky">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="pisen" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="nazev"/>
+                          <xs:element type="xs:string" name="autor"/>
+                          <xs:element type="xs:string" name="album"/>
+                          <xs:element type="xs:integer" name="bpm"/>
+                          <xs:element type="xs:string" name="tonina"/>
+                          <xs:element type="xs:integer" name="rok_vydani"/>
+                          <xs:element name="pristupne">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="PG12" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="label"/>
+                        </xs:sequence>
+                        <xs:attribute type="gender" name="pohlavi" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Vlastní datové typy -->
+
+  <!-- Pohlaví autora -->
+    <xs:simpleType name="gender">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="M"/>
+        <xs:enumeration value="Z"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+  <!-- Avatar -->
+    <xs:simpleType name="img">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="png"/>
+        <xs:enumeration value="jpeg"/>
+      </xs:restriction>
+    </xs:simpleType>
+  <!-- Slider 0% - 100% -->
+    <xs:simpleType name="slider">
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="100"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+  <!-- Boolean typ -->
+    <xs:simpleType name="nula_jedna">
+      <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+        <xs:maxInclusive value="1"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+  <!-- Nastavení jazyku -->
+    <xs:simpleType name="lang">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="EN"/>
+      <xs:enumeration value="RUS"/>
+    </xs:restriction>
+  </xs:simpleType> 
+</xs:schema>

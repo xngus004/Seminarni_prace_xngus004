@@ -6,36 +6,72 @@
   <!-- Vlastnosti uživatele -->
 		<user>
 			<id>1</id>
-      <uziv_jm></uziv_jm>
-			<jmeno></jmeno>
-      <prijmeni></prijmeni>
-      <dat_nar></dat_nar>
-			<heslo></heslo>
-			<preference></preference>
-      <like></like>
-			<membership>
-				<free></free>
-				<vip></vip>
-			</membership>
-			<email></email>
+      <uziv_jm>j_novak</uziv_jm>
+			<jmeno>Jan</jmeno>
+      <prijmeni>Novák</prijmeni>
+      <dat_nar>1990-09-24</dat_nar>
+			<heslo>Heslo1234</heslo>
+      <email>jan.novak@mail.com</email>
+      <interface>
+         <avatar>png</avatar>
+			   <preference>House</preference>
+         <like>14</like>
+			   <membership>
+				    <free>1</free>
+				    <vip>0</vip>
+			   </membership>
+      </interface>
 		</user>
+
+<!-- Vlastnosti free uživatele -->
+    <user_f>
+      <reklamy>1</reklamy>
+      <download>0</download>   
+    </user_f>
+
+<!-- Vlastnosti vip uživatele -->
+    <user_v>
+      <reklamy>0</reklamy>
+      <download>1</download>
+    </user_v>
 
 <!-- Nastavení aplikace -->
 		<nastaveni>
       <jazyk>CZ</jazyk>
-			<jas>70%</jas>	
-			<volume>53%</volume>
+			<jas>70</jas>	
+      <notifikace>1</notifikace>
 			<nahodne_prehr>1</nahodne_prehr>
+      <prehravani_pref>0</prehravani_pref>
 			<night_mode>0</night_mode>
 		</nastaveni>
 
+<!-- Komponenty přehrávače -->
+    <prehravac>
+      <stopa>png</stopa>
+      <volume>53</volume>
+      <tlacitka>
+        <play>1</play>
+        <pause>0</pause>
+        <stop>0</stop>
+        <share>facebook</share>
+      </tlacitka>
+    </prehravac>
+
+<!-- Vlastnosti domovské stránky -->
+    <z_hudba>
+      <by_pref>1</by_pref>
+      <by_like>0</by_like>
+    </z_hudba>
+
 <!-- Vyhledávací pole -->
 		<search>
-			<text></text>
-			<h_zanr></h_zanr>
-			<bpm></bpm>
-			<pohlavi_aut></pohlavi_aut>
-			<rok_vyd></rok_vyd>
+			<text>hledany_text</text>
+      <filtr>
+			   <h_zanr>hledany_zanr</h_zanr>
+			   <f_bpm>125</f_bpm>
+			   <pohlavi_aut>Z</pohlavi_aut>
+			   <rok_vyd>2014</rok_vyd>
+      </filtr>  
 		</search>
 </aplikace>
 
