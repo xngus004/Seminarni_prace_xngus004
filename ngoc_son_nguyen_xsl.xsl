@@ -3,12 +3,47 @@
   <xsl:template match="/">
     <html>
       <head>
-        <title>Ngoc_Son_Nguyen_-_projekt</title>
+        <title>Ngoc Son Nguyen - projekt</title>
         <style> body{font-family: Arial; font-size: 12px;} h2, table{padding: 5px; } h2{margin:10px 0 0 0;} h1{padding: 5px; background-color: ##669900;} td td {padding: 2px 8px;}
         td td:first-child{border-right: 1px solid #ccc; background-color: #ccc; font-weight: bold;}</style>
       </head>
       <body>
-        <h1>Hudební styly v nočních klubech</h1>
+
+        <h1>Uživatel</h1>
+        <table>
+            <tr> 
+              <xsl:for-each select="club_music/aplikace/user">
+                <table style="background-color: #eee; border: 1px solid #ddd;">
+                  <tr>
+                    <td>ID:</td>
+                    <td><xsl:value-of select="id"/></td>
+                  </tr>
+                  <tr>
+                    <td>Uživatelské jméno:</td>
+                    <td><xsl:value-of select="uziv_jm"/></td>
+                  </tr>
+                  <tr>
+                    <td>Jméno:</td>
+                    <td><xsl:value-of select="jmeno"/></td>
+                  </tr>
+                  <tr>
+                    <td>Příjmení:</td>
+                    <td><xsl:value-of select="prijmeni"/></td>
+                  </tr>
+                  <tr>
+                    <td>Datum Narození:</td>
+                    <td><xsl:value-of select="dat_nar"/></td>
+                  </tr>
+                  <tr>
+                    <td>E-mail:</td>
+                    <td><xsl:value-of select="email"/></td>
+                  </tr>
+                </table>
+              </xsl:for-each> 
+            </tr>
+        </table>
+
+        <h1>Databáze s hudbou</h1>
         <table>
           <xsl:for-each select="club_music/zanr">
             <tr><td colspan="3"><h2 style="background-color: #ddd; border: 1px solid #ccc; text-align: left">
