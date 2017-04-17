@@ -2,16 +2,12 @@
   <xs:element name="club_music">
     <xs:complexType>
       <xs:sequence>
+<!--Aplikace -->        
         <xs:element name="aplikace">
-          <xs:annotation>
-            <xs:documentation>Aplikace</xs:documentation>
-          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
+<!-- prvky uživatele -->              
               <xs:element name="user">
-                <xs:annotation>
-                  <xs:documentation>Vlastnosti uživatele</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="xs:byte" name="id"/>
@@ -41,10 +37,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+<!-- definice free uživatele -->  
               <xs:element name="user_f">
-                <xs:annotation>
-                  <xs:documentation>Vlastnosti free uživatele</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="nula_jedna" name="reklamy"/>
@@ -52,10 +46,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+<!-- definice vip uživatele -->                
               <xs:element name="user_v">
-                <xs:annotation>
-                  <xs:documentation>Vlastnosti vip uživatele</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="nula_jedna" name="reklamy"/>
@@ -63,10 +55,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+<!-- definice nastavení -->                
               <xs:element name="nastaveni">
-                <xs:annotation>
-                  <xs:documentation>Nastavení aplikace</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="lang" name="jazyk"/>
@@ -78,10 +68,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+<!-- defincie přehrávače -->                
               <xs:element name="prehravac">
-                <xs:annotation>
-                  <xs:documentation>Komponenty přehrávače</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="img" name="stopa"/>
@@ -99,10 +87,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+<!-- defincie domovské stránky -->                            
               <xs:element name="z_hudba">
-                <xs:annotation>
-                  <xs:documentation>Vlastnosti domovské stránky</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="nula_jedna" name="by_pref"/>
@@ -110,10 +96,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+<!-- defincie vyhledávače -->              
               <xs:element name="search">
-                <xs:annotation>
-                  <xs:documentation>Vyhledávací pole</xs:documentation>
-                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element type="xs:string" name="text"/>
@@ -133,10 +117,8 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+<!-- defincie databáze s hudbou -->        
         <xs:element name="zanr" maxOccurs="unbounded" minOccurs="0">
-          <xs:annotation>
-            <xs:documentation>Databáze s hudbou  Drum and bass, House, Techno, Trap</xs:documentation>
-          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="zanr_desc">
@@ -184,6 +166,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
   <!-- Vlastní datové typy -->
 
   <!-- Pohlaví autora -->
